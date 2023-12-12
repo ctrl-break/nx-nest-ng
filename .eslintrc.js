@@ -5,7 +5,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint/eslint-plugin'],
+    plugins: ['@nx', '@typescript-eslint/eslint-plugin'],
     extends: [
         'plugin:@typescript-eslint/recommended',
         'airbnb-typescript/base',
@@ -17,6 +17,9 @@ module.exports = {
         node: true,
         jest: true,
     },
-    ignorePatterns: ['.eslintrc.js'],
-    rules: {},
+    ignorePatterns: ['.eslintrc.js', 'dist/**'],
+    rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+        'import/named': 'off',
+    },
 };

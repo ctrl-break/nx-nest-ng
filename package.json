@@ -1,10 +1,11 @@
 {
     "name": "nx-nest-ng",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "license": "Apache-2.0",
     "scripts": {
         "format": "prettier --write \"apps/**/*.ts\"",
-        "lint": "eslint \"{apps,libs,test}/**/*.ts\" --fix"
+        "lint": "eslint \"{apps,libs,test}/**/*.ts\"",
+        "lint:fix": "eslint \"{apps,libs,test}/**/*.ts\" --fix"
     },
     "private": true,
     "devDependencies": {
