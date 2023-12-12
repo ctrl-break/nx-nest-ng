@@ -1,7 +1,7 @@
 {
     "name": "nx-nest-ng",
     "version": "0.1.0",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "scripts": {
         "format": "prettier --write \"apps/**/*.ts\"",
         "lint": "eslint \"{apps,libs,test}/**/*.ts\"",

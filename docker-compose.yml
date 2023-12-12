@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+    db:
+        container_name: db
+        image: postgres:16.1
+        restart: always
+        volumes:
+            - ./db/tmp/:/var/lib/pgsql/data
+            - ./db/createdb.sql:/docker-entrypoint-initdb.d/appdb.sql
+        environment:
+            POSTGRES_DB: ${DB_DATABASE}
+            POSTGRES_USER: ${DB_USERNAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+        ports:
+            - 5432:5432
