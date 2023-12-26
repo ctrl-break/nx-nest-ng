@@ -9,7 +9,12 @@ remove-db:
 		rm .env || true
 		rm ./db/createdb.sql  || true
 
-up:
-		docker-compose up -d
+dev-api: 
+		docker-compose up -d db
+		nx serve api
+
+build-api:
+		nx build api --prod
+		docker-compose up --build -d
 down:
 		docker-compose down
